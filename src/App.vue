@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <div class="row">
+      <app-header></app-header>
+    </div>
+    <div class="row">
+      <app-word-display></app-word-display>
+    </div>
+    <div class="row">
+      <app-word-input></app-word-input>
+    </div>
   </div>
 </template>
 
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue';
+import wordDisplay from './components/wordDisplay.vue';
+import wordInput from './components/wordInput.vue';
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  data(){
+    return {
+      
+    }
+  },
+  components : {
+    appHeader : Header,
+    appWordDisplay: wordDisplay,
+    appWordInput: wordInput
   }
 }
 </script>
 
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
