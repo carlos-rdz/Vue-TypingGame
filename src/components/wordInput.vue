@@ -12,12 +12,20 @@
 
 
 <script>
+
+import {eventBus} from '../main'
+
 export default {  
   data(){
     return {
       word : ''
     }
+  },
+  methods : {
+   
+    
   }
+
 }
 
 </script>

@@ -4,7 +4,12 @@
       <app-header></app-header>
     </div>
     <div class="row top-buffer">
-      <app-word-display></app-word-display>
+      <app-word-display 
+        :ourWords="words"
+        :deleteWord="deleteWord"
+        >
+        
+      </app-word-display>
     </div>
     <div class="row top-buffer">
       <app-word-input></app-word-input>
@@ -21,13 +26,18 @@ import wordInput from './components/wordInput.vue';
 export default {
   data(){
     return {
-      
+      words : ['this', 'is', 'easy']
     }
   },
   components : {
     appHeader : Header,
     appWordDisplay: wordDisplay,
     appWordInput: wordInput
+  },
+  methods : {
+    deleteWord(){
+      this.words.pop()
+    }
   }
 }
 </script>

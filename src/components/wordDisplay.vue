@@ -1,11 +1,11 @@
 <template>
     <div>
     <ul class="list-group">
-        <li class="list-group-item" v-for="word in words" >
+        <li class="list-group-item" v-for="word in ourWords" >
             {{word}}
         </li>
     </ul>
-    <button class="btn btn-primary" @click="deleteWords()"> delete word</button>
+    <button class="btn btn-primary" @click="deleteWord"> delete word</button>
     </div>
 </template>
 
@@ -14,13 +14,12 @@
 export default {
     data(){
         return {
-            words : ['this', 'is', 'easy']
+            
         }
     },
     methods: {
-        deleteWords(){
-            this.words.pop()
-        }
-    }
+
+    },
+    props : ['ourWords','deleteWord']
 }
 </script>
