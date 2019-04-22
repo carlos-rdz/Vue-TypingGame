@@ -1,9 +1,12 @@
 <template>
+    <div>
     <ul class="list-group">
-        <li class="list-group-item" v-for="(word, key, index) in words" v-if="word">
-            {{index + 1}}: {{key}}
+        <li class="list-group-item" v-for="word in words" >
+            {{word}}
         </li>
     </ul>
+    <button class="btn btn-primary" @click="deleteWords()"> delete word</button>
+    </div>
 </template>
 
 
@@ -11,11 +14,12 @@
 export default {
     data(){
         return {
-            words : {
-                this : true,
-                is: true,
-                easy: true
-            }
+            words : ['this', 'is', 'easy']
+        }
+    },
+    methods: {
+        deleteWords(){
+            this.words.pop()
         }
     }
 }

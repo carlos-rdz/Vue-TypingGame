@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <div class="row">
+    <div class="row top-buffer">
       <app-header></app-header>
     </div>
-    <div class="row">
+    <div class="row top-buffer">
       <app-word-display></app-word-display>
     </div>
-    <div class="row">
+    <div class="row top-buffer">
       <app-word-input></app-word-input>
     </div>
   </div>
@@ -34,5 +34,5 @@ export default {
 
 
 <style>
-
+.top-buffer { margin-top:20px; }
 </style>
